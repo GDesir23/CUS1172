@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gali Desir | Personal Webpage</title>
-
   <style>
     * {
       margin: 0;
@@ -23,7 +22,7 @@
     header {
       background: linear-gradient(135deg, #0f172a, #1d4ed8);
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
@@ -39,7 +38,6 @@
       color: #e0e7ff;
     }
 
-    /* PROFILE IMAGE */
     .profile-photo {
       width: 220px;
       height: 220px;
@@ -57,6 +55,7 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav ul {
@@ -72,6 +71,7 @@
       color: #1d4ed8;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -100,6 +100,12 @@
       padding-bottom: 8px;
     }
 
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -112,6 +118,11 @@
       padding: 20px;
       border-radius: 14px;
       border-left: 5px solid #1d4ed8;
+    }
+
+    .info-card h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
     }
 
     .skills-list {
@@ -127,6 +138,7 @@
       padding: 10px 14px;
       border-radius: 999px;
       font-weight: bold;
+      font-size: 0.95rem;
     }
 
     .contact-box {
@@ -139,6 +151,11 @@
       background: #f8fafc;
       padding: 16px;
       border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    .contact-item strong {
+      color: #0f172a;
     }
 
     .contact-item a {
@@ -147,26 +164,38 @@
       font-weight: bold;
     }
 
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
       background: #0f172a;
       color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 25px;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
     }
   </style>
 </head>
-
 <body>
-
   <header id="home">
     <h1>Gali Desir</h1>
-
-    <!-- YOUR IMAGE -->
-    <img src="profile.jpg" alt="Gali Desir" class="profile-photo" />
-
-    <p>
-      Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.
-    </p>
+    <img src="729EB0C5-E9A1-42AF-BD0A-18CD39F7AF64.jpeg" alt="Gali Desir" class="profile-photo" />
+    <p>Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.</p>
   </header>
 
   <nav>
@@ -180,20 +209,25 @@
   </nav>
 
   <main class="container">
-
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        Hello, my name is Gali Desir. I am a motivated student with an interest in technology, leadership, and personal growth. I am currently working toward becoming a future IT professional while developing both technical and communication skills.
-      </p>
+      <div class="about-content">
+        <p>Hello, my name is Gali Desir. I am a motivated student with an interest in technology, leadership, business, and personal development.</p>
+        <p>I continue to build my communication, teamwork, and technical skills while working toward becoming a future IT professional.</p>
+      </div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <div class="info-card">
-        <h3>St. John's University</h3>
-        <p>Bachelor's Degree in Information Technology</p>
-        <p>Expected Graduation: May 2027</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>St. John's University</h3>
+          <p>Bachelor's Degree in Information Technology. Expected Graduation: May 2027.</p>
+        </div>
+        <div class="info-card">
+          <h3>Academic Focus</h3>
+          <p>Focused on learning programming, databases, and how technology supports real world systems.</p>
+        </div>
       </div>
     </section>
 
@@ -218,14 +252,16 @@
         <div class="contact-item">
           Phone: <a href="tel:5164257192">(516) 425-7192</a>
         </div>
+        <div class="contact-item">
+          LinkedIn: <a href="https://www.linkedin.com/in/the-gali-desir" target="_blank">www.linkedin.com/in/the-gali-desir</a>
+        </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <p>&copy; 2026 Gali Desir</p>
   </footer>
-
 </body>
 </html>
+
