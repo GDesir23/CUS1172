@@ -15,8 +15,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f7fb;
-      color: #1f2937;
+      background: #1f2937; /* DARK GREY */
+      color: #e5e7eb;
       line-height: 1.6;
     }
 
@@ -36,7 +36,7 @@
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
-      color: #e0e7ff;
+      color: #c7d2fe;
     }
 
     .profile-photo {
@@ -47,15 +47,14 @@
       margin: 25px auto;
       display: block;
       border: 5px solid white;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
     nav {
-      background: white;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      background: #111827;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
       position: sticky;
       top: 0;
-      z-index: 10;
     }
 
     nav ul {
@@ -68,13 +67,13 @@
     }
 
     nav a {
-      color: #1d4ed8;
+      color: #93c5fd;
       text-decoration: none;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: #0f172a;
+      color: white;
     }
 
     .container {
@@ -84,18 +83,18 @@
     }
 
     section {
-      background: white;
+      background: #111827; /* DARK CARD */
       padding: 35px;
       margin-bottom: 30px;
       border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 
     section h2 {
-      color: #1d4ed8;
+      color: #60a5fa;
       margin-bottom: 15px;
       font-size: 2rem;
-      border-bottom: 3px solid #dbeafe;
+      border-bottom: 3px solid #1e40af;
       padding-bottom: 8px;
     }
 
@@ -108,31 +107,24 @@
 
     .click-badge {
       display: block;
-      background: #f8fafc;
+      background: #111827;
       padding: 22px;
       border-radius: 16px;
       text-decoration: none;
-      color: #1f2937;
-      border-left: 5px solid #1d4ed8;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+      color: #e5e7eb;
+      border-left: 5px solid #3b82f6;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .click-badge:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
     }
 
     .click-badge h3 {
-      color: #1d4ed8;
+      color: #60a5fa;
       margin-bottom: 8px;
-    }
-
-    .info-card {
-      background: #f8fafc;
-      padding: 20px;
-      border-radius: 14px;
-      border-left: 5px solid #1d4ed8;
     }
 
     .skills-list {
@@ -143,16 +135,12 @@
     }
 
     .skill {
-      background: #dbeafe;
-      color: #1e3a8a;
+      background: #1e3a8a;
+      color: white;
       padding: 10px 14px;
       border-radius: 999px;
       font-weight: bold;
       text-decoration: none;
-    }
-
-    .skill:hover {
-      background: #bfdbfe;
     }
 
     .contact-box {
@@ -162,14 +150,14 @@
     }
 
     .contact-item {
-      background: #f8fafc;
+      background: #1f2937;
       padding: 16px;
       border-radius: 12px;
       text-align: left;
     }
 
     .contact-item a {
-      color: #1d4ed8;
+      color: #60a5fa;
       text-decoration: none;
       font-weight: bold;
     }
@@ -217,17 +205,17 @@
     <div class="badge-grid">
       <a href="#education" class="click-badge">
         <h3>Education</h3>
-        <p>View my degree, school, and expected graduation date.</p>
+        <p>View my degree and academic details.</p>
       </a>
 
       <a href="#skills" class="click-badge">
         <h3>Skills</h3>
-        <p>See the technical and professional skills I am building.</p>
+        <p>See the skills I am building.</p>
       </a>
 
       <a href="#contact" class="click-badge">
         <h3>Contact</h3>
-        <p>Connect with me through email, phone, or LinkedIn.</p>
+        <p>Connect with me.</p>
       </a>
     </div>
   </header>
@@ -253,27 +241,26 @@
 
     <section id="education">
       <h2>Education</h2>
-      <a href="https://www.stjohns.edu/" target="_blank" class="click-badge">
+      <div class="click-badge">
         <h3>St. John's University</h3>
         <p>Bachelor's Degree in Information Technology</p>
         <p>Expected Graduation: May 2027</p>
-      </a>
+      </div>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
-        <a class="skill" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>
-        <a class="skill" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
-        <a class="skill" href="https://www.java.com/" target="_blank">Java</a>
-        <a class="skill" href="https://www.oracle.com/database/technologies/appdev/sql.html" target="_blank">SQL</a>
-        <span class="skill">Leadership</span>
-        <span class="skill">Communication</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Java</span>
+        <span class="skill">SQL</span>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
+
       <div class="contact-box">
 
         <div class="contact-item">
@@ -286,8 +273,8 @@
 
         <div class="contact-item">
           <a class="linkedin-badge" href="https://www.linkedin.com/in/the-gali-desir" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Logo" />
-            <span>Connect on LinkedIn</span>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+            Connect on LinkedIn
           </a>
         </div>
 
