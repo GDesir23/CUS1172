@@ -1,126 +1,253 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gali Desir - Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gali Desir | Personal Webpage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-        /* Navigation Bar Styling */
-        nav {
-            background-color: #e74c3c;
-            padding: 10px;
-        }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e0e7ff;
+    }
 
-        /* Headings Styling */
-        h1, h2 {
-            color: #e74c3c; /* Red */
-        }
+    nav {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        /* Profile Picture Styling */
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 250px; /* Bigger square profile picture */
-            height: 250px;
-        }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
 
-        /* Section Styling */
-        section {
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    nav a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        /* Paragraph Styling */
-        p {
-            font-size: 16px;
-        }
-    </style>
+    nav a:hover {
+      color: #0f172a;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    section {
+      background: white;
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    section h2 {
+      color: #1d4ed8;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      border-bottom: 3px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 14px;
+      border-left: 5px solid #1d4ed8;
+    }
+
+    .info-card h3 {
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #dbeafe;
+      color: #1e3a8a;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-item {
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    .contact-item strong {
+      color: #0f172a;
+    }
+
+    .contact-item a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 25px;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header id="home">
+    <h1>Gali Desir</h1>
+    <p>Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.</p>
+  </header>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#profile">Profile</a>
-        <a href="#education">Education</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#interests">Interests</a>
-        <a href="#favorites">Favorites</a>
-        <a href="projects">Projects</a>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Profile Section -->
-    <section id="profile">
-        <h1>Gali Desir</h1>
-        <h2>Sophomore at St. John's University</h2>
-        <p>Major: Information Technology</p>
-        <img src="IMG_8772.jpeg" alt="Profile Picture">
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>Hello, my name is Gali Desir. I am a motivated student with an interest in technology, leadership, business, and personal development. I enjoy learning new skills, working with others, and finding creative ways to solve problems.</p>
+        <p>Through my academic work and campus involvement, I continue to build my communication, teamwork, and technical skills. My goal is to keep growing as a student and future professional while making a positive impact in the communities I am part of.</p>
+      </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education">
-        <h2>Education</h2>
-        <p>St. Agnes Cathedral School (K-8), Chaminade High School (9-12), St. John's University (2023-Present)</p>
+      <h2>Education</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>St. John's University</h3>
+          <p>Currently pursuing my college education while developing skills in technology, leadership, and professional communication.</p>
+        </div>
+        <div class="info-card">
+          <h3>Academic Interests</h3>
+          <p>My interests include computer science, web development, business, data, and how technology can be used to improve real world experiences.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Work Experience Section -->
-    <section id="work">
-        <h2>Work Experience</h2>
-        <p>Waiter at Coral House (2023-present)</p>
-    </section>
-
-    <!-- Skills Section -->
     <section id="skills">
-        <h2>Programming Skills</h2>
-        <p>2 Years of programming in Java</p>
+      <h2>Skills</h2>
+      <p>Some of the skills I am continuing to develop include:</p>
+      <div class="skills-list">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Java</span>
+        <span class="skill">Communication</span>
+        <span class="skill">Leadership</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Problem Solving</span>
+      </div>
     </section>
 
-    <!-- Interests Section -->
-    <section id="interests">
-        <h2>General Interests</h2>
-        <p>I enjoy playing football, going to the gym, and hanging out with my friends.</p>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Please feel free to contact me using the information below.</p>
+      <div class="contact-box">
+        <div class="contact-item">
+          <strong>Email:</strong> <a href="mailto:galidesir@gmail.com">galidesir@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>Phone:</strong> <a href="tel:5164257192">(516) 425-7192</a>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Favorites Section -->
-    <section id="favorites">
-        <h2>Favorites</h2>
-        <p>Check out this video:</p>
-        <iframe src="https://youtu.be/vXvqB2AiAio?si=yAqbEbf0i8jip0Tw" title="Favorite Song" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
-
-    <div id="projects">
-        <h2>My Projects in this Course</h2>
-        <ul>
-            <li><a href="galidesir-projects-link.html">Project 1</a></li>
-        </ul>
-    </div>
-    
-
+  <footer>
+    <p>&copy; 2026 Gali Desir. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
-
