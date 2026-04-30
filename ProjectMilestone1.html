@@ -1,22 +1,232 @@
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-box">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gali Desir | Personal Webpage</title>
 
-    <div class="contact-item">
-      Email: <a href="mailto:galidesir@gmail.com">galidesir@gmail.com</a>
-    </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <div class="contact-item">
-      Phone: <a href="tel:5164257192">(516) 425-7192</a>
-    </div>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-    <div class="contact-item">
-      LinkedIn: 
-      <a href="https://www.linkedin.com/in/the-gali-desir" target="_blank">
-        www.linkedin.com/in/the-gali-desir
-      </a>
-    </div>
+    header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-  </div>
-</section>
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e0e7ff;
+    }
+
+    .profile-photo {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 25px auto;
+      display: block;
+      border: 5px solid white;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0f172a;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    section {
+      background: white;
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    section h2 {
+      color: #1d4ed8;
+      margin-bottom: 15px;
+      font-size: 2rem;
+      border-bottom: 3px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    .info-card {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 14px;
+      border-left: 5px solid #1d4ed8;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #dbeafe;
+      color: #1e3a8a;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .contact-box {
+      display: grid;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .contact-item {
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 12px;
+    }
+
+    .contact-item a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="home">
+    <h1>Gali Desir</h1>
+
+    <!-- MAKE SURE profile.jpg IS IN SAME FOLDER -->
+    <img src="profile.jpg" alt="Gali Desir" class="profile-photo" />
+
+    <p>
+      Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.
+    </p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello, my name is Gali Desir. I am a motivated student with an interest in technology, leadership, and personal growth. I am currently working toward becoming a future IT professional while developing both technical and communication skills.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="info-card">
+        <h3>St. John's University</h3>
+        <p>Bachelor's Degree in Information Technology</p>
+        <p>Expected Graduation: May 2027</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Java</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Leadership</span>
+        <span class="skill">Communication</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+
+        <div class="contact-item">
+          Email: <a href="mailto:galidesir@gmail.com">galidesir@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          Phone: <a href="tel:5164257192">(516) 425-7192</a>
+        </div>
+
+        <div class="contact-item">
+          LinkedIn: 
+          <a href="https://www.linkedin.com/in/the-gali-desir" target="_blank">
+            www.linkedin.com/in/the-gali-desir
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gali Desir</p>
+  </footer>
+
+</body>
+</html>
