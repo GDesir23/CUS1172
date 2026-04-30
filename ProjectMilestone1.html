@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gali Desir | Personal Webpage</title>
+  <title>Gali Desir | Personal Website</title>
 
   <style>
     * {
@@ -55,6 +55,7 @@
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav ul {
@@ -70,6 +71,10 @@
       color: #1d4ed8;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0f172a;
     }
 
     .container {
@@ -94,6 +99,35 @@
       padding-bottom: 8px;
     }
 
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .click-badge {
+      display: block;
+      background: #f8fafc;
+      padding: 22px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #1f2937;
+      border-left: 5px solid #1d4ed8;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .click-badge:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+    }
+
+    .click-badge h3 {
+      color: #1d4ed8;
+      margin-bottom: 8px;
+    }
+
     .info-card {
       background: #f8fafc;
       padding: 20px;
@@ -114,6 +148,11 @@
       padding: 10px 14px;
       border-radius: 999px;
       font-weight: bold;
+      text-decoration: none;
+    }
+
+    .skill:hover {
+      background: #bfdbfe;
     }
 
     .contact-box {
@@ -122,7 +161,6 @@
       margin-top: 15px;
     }
 
-    /* 🔥 LEFT ALIGN EVERYTHING */
     .contact-item {
       background: #f8fafc;
       padding: 16px;
@@ -136,7 +174,6 @@
       font-weight: bold;
     }
 
-    /* 🔥 LinkedIn aligned left now */
     .linkedin-badge {
       display: inline-flex;
       align-items: center;
@@ -170,10 +207,29 @@
 
   <header id="home">
     <h1>Gali Desir</h1>
+
     <img src="profile.jpg" alt="Gali Desir" class="profile-photo" />
+
     <p>
       Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.
     </p>
+
+    <div class="badge-grid">
+      <a href="#education" class="click-badge">
+        <h3>Education</h3>
+        <p>View my degree, school, and expected graduation date.</p>
+      </a>
+
+      <a href="#skills" class="click-badge">
+        <h3>Skills</h3>
+        <p>See the technical and professional skills I am building.</p>
+      </a>
+
+      <a href="#contact" class="click-badge">
+        <h3>Contact</h3>
+        <p>Connect with me through email, phone, or LinkedIn.</p>
+      </a>
+    </div>
   </header>
 
   <nav>
@@ -197,20 +253,20 @@
 
     <section id="education">
       <h2>Education</h2>
-      <div class="info-card">
+      <a href="https://www.stjohns.edu/" target="_blank" class="click-badge">
         <h3>St. John's University</h3>
         <p>Bachelor's Degree in Information Technology</p>
         <p>Expected Graduation: May 2027</p>
-      </div>
+      </a>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">Java</span>
-        <span class="skill">SQL</span>
+        <a class="skill" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>
+        <a class="skill" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
+        <a class="skill" href="https://www.java.com/" target="_blank">Java</a>
+        <a class="skill" href="https://www.oracle.com/database/technologies/appdev/sql.html" target="_blank">SQL</a>
         <span class="skill">Leadership</span>
         <span class="skill">Communication</span>
       </div>
