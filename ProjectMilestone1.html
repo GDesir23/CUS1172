@@ -26,10 +26,12 @@
       text-align: center;
     }
 
+    /* ✅ PROFILE IMAGE (FIXED) */
     .profile-photo {
       width: 220px;
       height: 220px;
       object-fit: cover;
+      object-position: center;
       border-radius: 50%;
       margin: 25px auto;
       display: block;
@@ -47,6 +49,10 @@
       color: #93c5fd;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
     }
 
     section {
@@ -88,9 +94,12 @@
 <header>
   <h1>Gali Desir</h1>
 
-  <img src="<img src="/IMG_2953.jpeg">" alt="Gali Desir" class="profile-photo">
+  <!-- ✅ IMAGE CORRECTLY PLACED -->
+  <img src="IMG_2953.jpeg" alt="Gali Desir" class="profile-photo">
 
-  <p>Hi! I'm Gali and I'm a Information Technology Student at St. John's University and an Aspiring IT Infrastructure Engineer</p>
+  <p>
+    Hi! I'm Gali and I'm an Information Technology student at St. John's University and an aspiring IT Infrastructure Engineer
+  </p>
 </header>
 
 <nav>
