@@ -15,9 +15,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #1f2937; /* DARK GREY */
+      background: #1f2937;
       color: #e5e7eb;
-      line-height: 1.6;
     }
 
     header {
@@ -25,18 +24,6 @@
       color: white;
       padding: 60px 20px;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      color: #c7d2fe;
     }
 
     .profile-photo {
@@ -47,119 +34,32 @@
       margin: 25px auto;
       display: block;
       border: 5px solid white;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     }
 
     nav {
       background: #111827;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-      position: sticky;
-      top: 0;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      gap: 30px;
-      padding: 16px;
-      flex-wrap: wrap;
+      padding: 15px;
+      text-align: center;
     }
 
     nav a {
+      margin: 0 15px;
       color: #93c5fd;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav a:hover {
-      color: white;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 40px auto;
-    }
-
     section {
-      background: #111827; /* DARK CARD */
-      padding: 35px;
-      margin-bottom: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-    }
-
-    section h2 {
-      color: #60a5fa;
-      margin-bottom: 15px;
-      font-size: 2rem;
-      border-bottom: 3px solid #1e40af;
-      padding-bottom: 8px;
-    }
-
-    .badge-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .click-badge {
-      display: block;
       background: #111827;
-      padding: 22px;
-      border-radius: 16px;
-      text-decoration: none;
-      color: #e5e7eb;
-      border-left: 5px solid #3b82f6;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .click-badge:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.7);
-    }
-
-    .click-badge h3 {
-      color: #60a5fa;
-      margin-bottom: 8px;
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .skill {
-      background: #1e3a8a;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .contact-box {
-      display: grid;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .contact-item {
-      background: #1f2937;
-      padding: 16px;
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 900px;
       border-radius: 12px;
-      text-align: left;
     }
 
-    .contact-item a {
+    h2 {
       color: #60a5fa;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .linkedin-badge {
@@ -167,125 +67,69 @@
       align-items: center;
       gap: 10px;
       background: #0a66c2;
-      color: white !important;
-      padding: 10px 16px;
-      border-radius: 10px;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
+      margin-top: 10px;
     }
 
     .linkedin-badge img {
-      width: 28px;
-      height: 28px;
+      width: 25px;
       background: white;
-      border-radius: 4px;
-      padding: 2px;
+      border-radius: 3px;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #0f172a;
-      color: white;
-    }
   </style>
 </head>
 
 <body>
 
-  <header id="home">
-    <h1>Gali Desir</h1>
+<header>
+  <h1>Gali Desir</h1>
 
-    <img src="profile.jpg" alt="Gali Desir" class="profile-photo" />
+  <!-- ✅ THIS WILL WORK IF FILE IS IN SAME FOLDER -->
+  <img src="profile.jpg" alt="Gali Desir" class="profile-photo">
 
-    <p>
-      Student, leader, and aspiring technology professional focused on learning, growth, and creating meaningful digital experiences.
-    </p>
+  <p>Student and aspiring IT professional</p>
+</header>
 
-    <div class="badge-grid">
-      <a href="#education" class="click-badge">
-        <h3>Education</h3>
-        <p>View my degree and academic details.</p>
-      </a>
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-      <a href="#skills" class="click-badge">
-        <h3>Skills</h3>
-        <p>See the skills I am building.</p>
-      </a>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a student focused on technology and personal growth.</p>
+</section>
 
-      <a href="#contact" class="click-badge">
-        <h3>Contact</h3>
-        <p>Connect with me.</p>
-      </a>
-    </div>
-  </header>
+<section id="education">
+  <h2>Education</h2>
+  <p>St. John's University</p>
+  <p>Bachelor's Degree in Information Technology</p>
+  <p>Expected Graduation: May 2027</p>
+</section>
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<section id="skills">
+  <h2>Skills</h2>
+  <p>HTML, CSS, Java, SQL, Leadership, Communication</p>
+</section>
 
-  <main class="container">
+<section id="contact">
+  <h2>Contact</h2>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hello, my name is Gali Desir. I am a motivated student with an interest in technology, leadership, and personal growth.
-      </p>
-    </section>
+  <p>Email: <a href="mailto:galidesir@gmail.com">galidesir@gmail.com</a></p>
+  <p>Phone: <a href="tel:5164257192">(516) 425-7192</a></p>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="click-badge">
-        <h3>St. John's University</h3>
-        <p>Bachelor's Degree in Information Technology</p>
-        <p>Expected Graduation: May 2027</p>
-      </div>
-    </section>
+  <a class="linkedin-badge" href="https://www.linkedin.com/in/the-gali-desir" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+    Connect on LinkedIn
+  </a>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">Java</span>
-        <span class="skill">SQL</span>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-
-      <div class="contact-box">
-
-        <div class="contact-item">
-          Email: <a href="mailto:galidesir@gmail.com">galidesir@gmail.com</a>
-        </div>
-
-        <div class="contact-item">
-          Phone: <a href="tel:5164257192">(516) 425-7192</a>
-        </div>
-
-        <div class="contact-item">
-          <a class="linkedin-badge" href="https://www.linkedin.com/in/the-gali-desir" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
-            Connect on LinkedIn
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Gali Desir</p>
-  </footer>
+</section>
 
 </body>
 </html>
